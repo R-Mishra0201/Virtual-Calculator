@@ -1,0 +1,118 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Container */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffcc00; /* Lighter yellow */
+}
+
+/* Child Container */
+.child {
+    border: #898787 1px solid;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjusted height for better fit */
+    gap: 20px;
+    width: 80vw;
+    max-width: 450px; /* Max width for larger screens */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add soft shadow */
+    padding: 20px;
+}
+
+/* Screen Area */
+.screen {
+    width: 89%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen input {
+    width: 100%;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    text-align: right; /* Align text to the right */
+    background: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text */
+}
+
+/* Button Container */
+.button {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Individual Buttons */
+.button button {
+    cursor: pointer;
+    background: #ff25af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 15px 30px; /* Increased padding for better button size */
+    border: none;
+    width: 22%; /* Adjusted width to fit better */
+    transition: all 0.3s ease;
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button button:hover {
+    background: #ff19a7; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slight scale effect for interactivity */
+}
+
+.button button:active {
+    background: #ff107f; /* Even darker shade on click */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .child {
+        width: 80vw; /* Adjust width for smaller screens */
+    }
+
+    .button button {
+        width: 30%; /* Larger button size for small screens */
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .screen input {
+        font-size: 20px; /* Larger text for small screens */
+    }
+}
